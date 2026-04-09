@@ -3,7 +3,6 @@
     "tags": [
       "a",
       "article",
-      "base",
       "body",
       "button",
       "details",
@@ -190,6 +189,7 @@
       "navbar-brand",
       "navbar-nav",
       "object-cover",
+      "object-top",
       "opacity-0",
       "opacity-100",
       "order-0",
