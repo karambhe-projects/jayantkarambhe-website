@@ -28,7 +28,7 @@ Whether in the consulting room or the classroom, his mission is the same: empowe
   <img src="/images/lifestyle-medicine-logo.png" alt="International Board of Lifestyle Medicine — Certified Physician" style="height: 60px;">
   <img src="/images/CAHS-Logo.png" alt="Coonamble Aboriginal Health Services" style="height: 80px;">
   <img src="/images/lifestylemedicine-logo.png" alt="Lifestyle as Medicine Australia & New Zealand" style="height: 60px;">
-  <img src="/images/UWA-logo.avif" alt="The University of Western Australia" style="height: 60px;">
+  <img src="/images/UWA-logo.png" alt="The University of Western Australia" style="height: 60px;">
   <img src="/images/RACGP-logo.png" alt="RACGP" style="height: 60px;">
 </div>
 
