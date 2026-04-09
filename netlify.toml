@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --include=dev && export PATH=$PWD/node_modules/.bin:$PATH && npm run build"
+  command = "npm install --include=dev && npx tailwindcss --help && npm run build"
   publish = "public"
 
 [build.environment]
@@ -10,7 +10,7 @@
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm install --include=dev && export PATH=$PWD/node_modules/.bin:$PATH && npm run build"
+  command = "npm install --include=dev && npx tailwindcss --help && npm run build"
 
 [[redirects]]
   from = "/admin"
