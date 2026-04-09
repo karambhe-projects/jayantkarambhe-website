@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.145.0"
+  NODE_ENV = "production"
+  HUGO_ENV = "production"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301

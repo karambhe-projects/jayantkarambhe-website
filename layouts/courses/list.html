@@ -1,0 +1,42 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-14">
+        <h1 class="mb-4">{{ .Title }}</h1>
+        {{ if .Content }}
+          <div class="content text-lg text-text">
+            {{ .Content }}
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="row gy-4 justify-center">
+        {{ range .Pages.ByWeight }}
+          <div class="col-12 sm:col-6 lg:col-4">
+            <div class="rounded-xl bg-light dark:bg-darkmode-light p-6 h-full flex flex-col">
+              {{ if .Params.image }}
+                <img
+                  src="{{ .Params.image }}"
+                  alt="{{ .Title }}"
+                  class="rounded-lg mb-4 w-full h-40 object-cover"
+                />
+              {{ end }}
+              <h3 class="mb-2 text-lg">{{ .Title }}</h3>
+              <p class="text-text mb-4 flex-grow">{{ .Description }}</p>
+              {{ if .Params.course_url }}
+                <a
+                  href="{{ .Params.course_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-sm mt-auto"
+                >
+                  Start Course →
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

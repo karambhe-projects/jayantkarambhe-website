@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ─── Blog Posts ───
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/english/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{year}}/{{month}}/{{day}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false, hint: "Featured image for the post" }
+      - { label: "Categories", name: "categories", widget: "list", default: ["General"], hint: "Comma-separated list" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Author", name: "author", widget: "string", default: "Dr Jayant Karambhe" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ─── Courses ───
+  - name: "courses"
+    label: "Courses"
+    folder: "content/english/courses"
+    create: true
+    slug: "{{slug}}"
+    filter: { field: "title", pattern: "^(?!Courses$)" }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Course URL", name: "course_url", widget: "string", hint: "Full URL to the GitHub Pages course (e.g. https://username.github.io/course-name/)" }
+      - { label: "Image", name: "image", widget: "image", required: false, hint: "Course thumbnail image" }
+      - { label: "Sort Order", name: "weight", widget: "number", default: 10, hint: "Lower numbers appear first" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false, hint: "Optional longer description shown on course detail page" }
+
+  # ─── Standalone Pages ───
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/english/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/english/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "text", hint: "Short biography paragraph" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Enable", name: "enable", widget: "boolean", default: true }
+                  - { label: "Label", name: "label", widget: "string", default: "Browse Courses" }
+                  - { label: "Link", name: "link", widget: "string", default: "/courses/" }

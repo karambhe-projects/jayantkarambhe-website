@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container max-w-3xl">
+      <h1 class="mb-4">{{ .Title }}</h1>
+      <p class="text-lg text-text mb-6">{{ .Description }}</p>
+
+      <div class="content mb-8">
+        {{ .Content }}
+      </div>
+
+      {{ if .Params.course_url }}
+        <a
+          href="{{ .Params.course_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Start Course →
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
