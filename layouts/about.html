@@ -5,7 +5,13 @@
         <div class="md:col-10 lg:col-8">
           {{ if .Params.image }}
             <div class="mb-6 flex justify-center">
-              {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "rounded-full w-44 h-44 object-cover shadow-lg border-4 border-theme-light" "Size" "200x200") }}
+              <img
+                src="{{ .Params.image }}"
+                alt="{{ .Title }}"
+                loading="eager"
+                class="rounded-full object-cover shadow-lg border-4 border-theme-light"
+                style="width: 176px; height: 176px;"
+              />
             </div>
           {{ end }}
           <h2 class="h3 mb-6 text-center">{{ .Title }}</h2>
