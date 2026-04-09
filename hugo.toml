@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://jayantkarambhe.netlify.app/"
+baseURL = "https://jayantkarambhe.com.au/"
 # Title of your website (required).
 title = "Dr Jayant Karambhe — General Practitioner & Lifestyle Medicine"
 # Your theme name
