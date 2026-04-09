@@ -1,19 +1,21 @@
 ---
 title: "Trichology for GPs"
 meta_title: "Trichology for GPs — Free Course"
-description: "A practical course on hair and scalp disorders for general practitioners."
+description: "A complete clinical guide to hair and scalp disorders for general practitioners. 8 chapters, 160+ Anki cards, 40+ diagrams."
 image: "/images/courses/trichology-for-gp.png"
 course_url: "https://karambhe-projects.github.io/Trichology-for-GP/"
 weight: 1
 draft: false
 ---
 
-A practical, evidence-based course designed for general practitioners covering the diagnosis and management of common hair and scalp disorders.
+A complete clinical guide to hair and scalp disorders, designed for general practitioners. Evidence-based, GP-level trichology covering diagnosis, examination, trichoscopy, and treatment of the most common hair and scalp conditions encountered in primary care.
 
-**Topics covered:**
-- Hair biology and the hair growth cycle
-- Common causes of hair loss
-- Scalp conditions and their management
-- When to refer to a specialist
+Each chapter includes original SVG diagrams, clinical reference tables, GP-level analogies, and Anki flashcard decks for long-term memory retention.
+
+**What's included:**
+- 8 comprehensive chapters
+- 160+ Anki flashcards
+- 40+ original diagrams
+- 160+ references
 
 [Start the course →](https://karambhe-projects.github.io/Trichology-for-GP/)

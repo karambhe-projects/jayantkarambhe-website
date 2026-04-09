@@ -1,0 +1,88 @@
+{{ define "main" }}
+  <!-- Hero / Profile Banner -->
+  {{ with .Params.banner }}
+    <section class="section pt-14">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-7 md:col-9 mb-8 text-center">
+            <!-- Circular profile image -->
+            {{ with .image }}
+              <div class="mb-6 flex justify-center">
+                {{ partial "image" (dict "Src" . "Alt" "Dr Jayant Karambhe" "Loading" "eager" "Class" "rounded-full w-44 h-44 object-cover shadow-lg border-4 border-theme-light" "Size" "200x200") }}
+              </div>
+            {{ end }}
+
+            <h1 class="mb-2 text-h3 lg:text-h1">
+              {{ .title | markdownify }}
+            </h1>
+            <p class="mb-4 text-lg text-text-light font-medium">
+              General Practitioner · Lifestyle Medicine Specialist
+            </p>
+            <p class="mb-8 mt-4">
+              {{ .content | markdownify }}
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              {{ with .button }}
+                {{ if .enable }}
+                  <a
+                    class="btn btn-primary"
+                    href="{{ .link | absURL }}"
+                    {{ if strings.HasPrefix .link `http` }}
+                      target="_blank" rel="noopener"
+                    {{ end }}>
+                    {{ .label }}
+                  </a>
+                {{ end }}
+              {{ end }}
+              <a class="btn btn-outline-primary" href="/about/">
+                About Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <!-- Featured Course -->
+  {{ with site.GetPage "/courses" }}
+    {{ $courses := .Pages.ByWeight }}
+    {{ if gt (len $courses) 0 }}
+      <section class="section-sm bg-gradient">
+        <div class="container">
+          <div class="text-center mb-10">
+            <h2 class="mb-4">Featured Course</h2>
+            <p class="text-lg text-text">Free, self-paced, and open source</p>
+          </div>
+          <div class="row justify-center">
+            {{ with index $courses 0 }}
+              <div class="col-12 sm:col-8 lg:col-6">
+                <div class="rounded-xl bg-light dark:bg-darkmode-light p-6 text-center">
+                  {{ if .Params.image }}
+                    <img
+                      src="{{ .Params.image }}"
+                      alt="{{ .Title }}"
+                      class="rounded-lg mb-4 w-full h-48 object-cover"
+                    />
+                  {{ end }}
+                  <h3 class="mb-2">{{ .Title }}</h3>
+                  <p class="text-text mb-4">{{ .Description }}</p>
+                  {{ if .Params.course_url }}
+                    <a
+                      href="{{ .Params.course_url }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Start Course →
+                    </a>
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+{{ end }}

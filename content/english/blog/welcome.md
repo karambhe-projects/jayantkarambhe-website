@@ -3,7 +3,7 @@ title: "Welcome to My Blog"
 meta_title: ""
 description: "An introduction to this blog and what to expect."
 date: 2026-04-09T00:00:00Z
-image: "/images/blog/welcome.png"
+image: ""
 categories: ["General"]
 author: "Dr Jayant Karambhe"
 tags: ["lifestyle medicine", "welcome"]
@@ -21,4 +21,4 @@ Expect articles on:
 
 I believe that lifestyle medicine has the power to transform how we approach chronic disease. Through this blog, I hope to make that knowledge accessible to both healthcare professionals and patients.
 
-Stay tuned for more posts, and feel free to [get in touch](mailto:jkarambhe@yahoo.com) with questions or topics you'd like me to cover.
+Stay tuned for more posts.
