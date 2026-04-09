@@ -1,16 +1,16 @@
 [build]
-  command = "npm install --include=dev && npm run build"
+  command = "npm install --include=dev && export PATH=$PWD/node_modules/.bin:$PATH && npm run build"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.151.0"
+  HUGO_VERSION = "0.160.1"
   HUGO_ENV = "production"
 
 [context.production.environment]
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm install --include=dev && npm run build"
+  command = "npm install --include=dev && export PATH=$PWD/node_modules/.bin:$PATH && npm run build"
 
 [[redirects]]
   from = "/admin"
