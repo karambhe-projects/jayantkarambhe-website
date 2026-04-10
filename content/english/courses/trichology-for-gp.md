@@ -3,7 +3,7 @@ title: "Trichology for GPs"
 meta_title: "Trichology for GPs — Free Course"
 description: "A complete clinical guide to hair and scalp disorders for general practitioners. 8 chapters, 160+ Anki cards, 40+ diagrams."
 image: "/images/courses/trichology-for-gp.png"
-course_url: "https://karambhe-projects.github.io/Trichology-for-GP/"
+course_url: "https://courses.jayantkarambhe.com.au/Trichology-for-GP/"
 weight: 1
 draft: false
 ---
@@ -18,4 +18,4 @@ Each chapter includes original SVG diagrams, clinical reference tables, GP-level
 - 40+ original diagrams
 - 160+ references
 
-[Start the course →](https://karambhe-projects.github.io/Trichology-for-GP/)
+[Start the course →](https://courses.jayantkarambhe.com.au/Trichology-for-GP/)
